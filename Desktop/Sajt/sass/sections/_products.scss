@@ -1,0 +1,94 @@
+section.products{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    h2{
+        max-width: 800px;
+        text-align: center;
+        margin: auto;
+        color: $white;
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 70px;
+
+        @media(max-width: $md){
+            font-size: 24px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    .container{
+        display: flex;
+        @media(max-width: $md){
+            display: block;
+        }
+
+        .product-item{
+            width: 100%;
+            color: $white;
+            height: 410px;
+            transition: 0.5s;
+            position: relative;
+
+            @media(max-width: $md){
+                height: 300px;
+                background-size: cover;
+            }
+
+            &:hover{
+                transition: 0.5s;
+                .overlay{
+                    display: block;
+                    background-color: rgba(0,0,0,0.5);
+                }
+            }
+            &.flour{
+                background-image: url("../img/flour.jpg");
+
+            }
+            &.bread{
+                background-image: url("../img/flour.jpg");
+            }
+            .product-info{
+                padding: 30px;
+
+                h3{
+                font-size: 32px;
+                font-weight: 400;
+                }
+                p{
+                    font-size: 18px;
+                }
+    
+            }
+    
+            .overlay{
+                display: none;
+                background-color: rgba(0,0,0,0);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right:0;
+                left: 0;
+
+                a{
+                    text-align: center;
+                    display: block;
+                    margin: auto;
+                    margin-top: 30%;
+                    color: $black;
+                    width: 130px;
+                    text-decoration: none;
+                    padding:10px;
+                    background-color: $white;
+
+                }
+                
+            }
+        }
+
+    }
+
+    
+}
